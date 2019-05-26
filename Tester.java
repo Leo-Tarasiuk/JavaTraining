@@ -1,10 +1,9 @@
 public class Tester {
 	public static void main(String[] args) {
-		double a = 5.4;
-		double b = 3;
+		int a = 1357;
 
-		double S = CircleLogic.calcSquareCircle(a, b);
+		boolean T = NumericSequence.checkNumber(a);
 
-		Printer.print(S);
+		Printer.print(T);
 	}
 }

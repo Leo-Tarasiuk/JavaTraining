@@ -1,5 +1,5 @@
 public class Printer {
-	public static void print(double msg) {
+	public static void print(boolean msg) {
 		System.out.println(msg);
 	}
 }
