@@ -4,8 +4,10 @@ public class Tester {
 		double b = 3;
 		double c = 3;
 
-		boolean msg = Same.compareNumbers(a, b, c);
+		boolean msgEqual = Same.compareEqualNumbers(a, b, c);
+		boolean msgUnequal = Same.compareUnequalNumbers(a, b, c);
 
-		Printer.print(msg);
+		Printer.print(msgEqual);
+		Printer.print(msgUnequal);
 	}
 }
