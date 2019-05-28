@@ -19,6 +19,7 @@ public class ReverseLogic {
 		a /= 10;
 
 		int num7 = a % 10;
+		a = 1;
 		
 		a *= 10;
 		num6 *= a;
