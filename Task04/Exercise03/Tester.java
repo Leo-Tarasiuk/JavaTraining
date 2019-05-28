@@ -2,8 +2,10 @@ public class Tester {
 	public static void main(String[] args) {
 		int a = 1357;
 
-		boolean T = NumericSequence.checkNumber(a);
+		boolean incrflag = NumericSequence.checkIncreaseSequence(a);
+		boolean decrflag = NumericSequence.checkDecreaseSequence(a);
 
-		Printer.print(T);
+		Printer.print(incrflag);
+		Printer.print(decrflag);
 	}
 }
