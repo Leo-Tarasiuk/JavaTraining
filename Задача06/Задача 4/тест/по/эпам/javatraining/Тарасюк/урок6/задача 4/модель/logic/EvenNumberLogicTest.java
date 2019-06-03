@@ -14,4 +14,13 @@ public class EvenNumberLogicTest {
 
         assertEquals(expected, EvenNumberLogic.checkEven(a));
     }
+
+    @Test
+    public void testcheckUneven() {
+        int a = 531;
+
+        String expected = "uneven";
+
+        assertEquals(expected, EvenNumberLogic.checkUneven(a));
+    }
 }
