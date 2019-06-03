@@ -11,8 +11,10 @@ public class EvenNumber {
 
         try {
             int value = scanner.nextInt();
-            String msg = EvenNumberLogic.checkEven(value);
-            Printer.print(msg);
+            String msgEven = EvenNumberLogic.checkEven(value);
+            String msgUneven = EvenNumberLogic.checkUneven(value);
+            Printer.print(msgEven);
+            Printer.print(msgUneven);
         } catch (Exception e) {
             Printer.printException();
         }
