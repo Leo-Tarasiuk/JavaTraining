@@ -7,13 +7,27 @@ public class EvenNumberLogic {
         while (flag && val != 0) {
             int a = val % 10;
             if (a % 2 == 0) {
-                flag = true;
                 val /= 10;
             } else {
                 flag = false;
             }
         }
 
-        return flag ? "even" : "uneven";
+        return flag ? "even" : "not even";
+    }
+
+    public static String checkUneven(int val) {
+        boolean flag = true;
+
+        while (flag && val != 0) {
+            int a = val % 10;
+            if (a % 2 != 0) {
+                val /= 10;
+            } else {
+                flag = false;
+            }
+        }
+
+        return flag ? "uneven" : "not uneven";
     }
 }
