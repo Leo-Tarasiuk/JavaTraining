@@ -1,17 +1,15 @@
 package by.epam.javatraining.tarasiuk.lesson6.task1.model.logic;
 
-import by.epam.javatraining.tarasiuk.lesson6.task1.view.logic.Printer;
-
 import java.util.Random;
 
 public class CoinLogic {
 
-    private static final Random random = new Random();
     private static int Eagle;
     private static int Tale;
 
     public static void calcSide(int shot) {
         if (checkValid(shot)) {
+            Random random = new Random();
             for (int i = 0; i < shot; i++) {
                 int side = random.nextInt(2);
                 if (side == 0) {
@@ -20,8 +18,6 @@ public class CoinLogic {
                     Tale++;
                 }
             }
-        } else {
-            Printer.printException();
         }
     }
 
