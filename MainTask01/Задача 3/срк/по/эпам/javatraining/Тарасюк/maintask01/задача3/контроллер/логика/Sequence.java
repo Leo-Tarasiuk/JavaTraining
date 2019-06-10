@@ -5,9 +5,7 @@ import by.epam.javatraining.tarasiuk.maintask01.task3.view.logic.Printer;
 
 public class Sequence {
     public static void main(String[] args) {
-        double[] array = {51, 23, 12, 4};
-
-        boolean sequence = SequenceLogic.checkSequence(array);
+        boolean sequence = SequenceLogic.checkSequence(41, 32, 15, 9);
 
         Printer.print(sequence);
     }
