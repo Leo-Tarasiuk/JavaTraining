@@ -43,7 +43,7 @@ public class ArraySortingLogicTest {
 
         int[] expected = {4, 10, 12, 13};
 
-        ArraySortingLogic.mergeSort(array, array.length);
+        ArraySortingLogic.mergeSort(array.length, array);
 
         assertArrayEquals(expected, array);
     }
