@@ -13,7 +13,7 @@ public class SearchLogicTest {
 
         int expected = 2;
 
-        assertEquals(expected, SearchLogic.linearSearch(array, elementToSearch));
+        assertEquals(expected, SearchLogic.linearSearch(elementToSearch, array));
     }
 
     @Test
@@ -23,6 +23,6 @@ public class SearchLogicTest {
 
         int expected = 4;
 
-        assertEquals(expected, SearchLogic.binarySearch(array,elementToSearch));
+        assertEquals(expected, SearchLogic.binarySearch(elementToSearch, array));
     }
 }
