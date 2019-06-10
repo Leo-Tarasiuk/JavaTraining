@@ -5,10 +5,8 @@ import by.epam.javatraining.tarasiuk.maintask01.task1.view.logic.Printer;
 
 public class ExtremeValue {
     public static void main(String[] args) {
-        double[] array = {3, 5, 12, 9, 27, 1};
-
-        double max = ExtremeValueLogic.findMax(array);
-        double min = ExtremeValueLogic.findMin(array);
+        double max = ExtremeValueLogic.findMax(213, 42, 12, 3);
+        double min = ExtremeValueLogic.findMin(213, 42, 12, 3);
 
         Printer.print(max);
         Printer.print(min);
