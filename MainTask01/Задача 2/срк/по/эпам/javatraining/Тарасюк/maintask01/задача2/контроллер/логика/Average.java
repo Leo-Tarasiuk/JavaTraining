@@ -5,10 +5,8 @@ import by.epam.javatraining.tarasiuk.maintask01.task2.view.logic.Printer;
 
 public class Average {
     public static void main(String[] args) {
-        double[] array = {3, 5, 12, 9, 27, 1};
-
-        double averageValue = AverageLogic.calcAverage(array);
-        double geometricValue = AverageLogic.calcGeometricMean(array);
+        double averageValue = AverageLogic.calcAverage(13, 43, 31, 55);
+        double geometricValue = AverageLogic.calcGeometricMean(13, 43, 31, 55);
 
         Printer.print(averageValue);
         Printer.print(geometricValue);
