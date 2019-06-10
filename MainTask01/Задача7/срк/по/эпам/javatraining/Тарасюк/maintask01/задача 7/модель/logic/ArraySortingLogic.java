@@ -1,14 +1,45 @@
 package by.epam.javatraining.tarasiuk.maintask01.task7.model.logic;
 
+/**
+ * This class sorts vector
+ * development date: 09.06.2019
+ *
+ * @author Tarasiuk Leontiy
+ * @version java "1.8.0_211"
+ */
+
 public class ArraySortingLogic {
 
+    /**
+     * Method checks for an empty array
+     *
+     * @param array of elements
+     * @return Is the array empty
+     */
     private static boolean checkNull(int[] array) {
-        return array.length == 0 || array.length == 1;
+        return array.length == 0;
     }
 
-    //------------------bubble sort-----------------------
-    public static void bubbleSort(int[] array) {
+    /**
+     * Method checks whether one element in the array
+     *
+     * @param array of elements
+     * @return Is there one element in the array
+     */
+    private static boolean checkLength(int[] array) {
+        return array.length == 1;
+    }
+
+    /************bubble sort*************
+     *
+     * Bubble sorting is one of the simplest and most inefficient sorting (O(n^2))
+     *
+     * @param array of elements
+     */
+    public static void bubbleSort(int... array) {
         if (checkNull(array)) {
+            return;
+        } else if (checkLength(array)) {
             return;
         }
 
@@ -26,9 +57,19 @@ public class ArraySortingLogic {
         }
     }
 
-    //------------------insertion sort-----------------------
-    public static int[] insertSort(int[] array) {
+    /************insertion sort*************
+     *
+     * Sorting by inserts is most effective when the array is already partially sorted
+     * and when there are not many elements of the array.
+     * If the elements are less than 10, then this algorithm is the best. (O(n^2))
+     *
+     * @param array of elements
+     * @return new array
+     */
+    public static int[] insertSort(int... array) {
         if (checkNull(array)) {
+            return array;
+        } else if (checkLength(array)) {
             return array;
         }
 
@@ -51,9 +92,16 @@ public class ArraySortingLogic {
         return destinationArray;
     }
 
-    //------------------selection sort-----------------------
-    public static void selectSort(int[] array) {
+    /************selection sort*************
+     *
+     *May be both stable and unstable (O(n^2))
+     *
+     * @param array of elements
+     */
+    public static void selectSort(int... array) {
         if (checkNull(array)) {
+            return;
+        } else if (checkLength(array)) {
             return;
         }
 
@@ -74,13 +122,17 @@ public class ArraySortingLogic {
         }
     }
 
-    //------------------merge sort-----------------------
-    public static void mergeSort(int[] array, int n) {
-        if(checkNull(array)) {
+    /************merge sort*************
+     *
+     * Sophisticated sorting with recursion and logarithmic dependency ( O(n log n) )
+     *
+     * @param n - array.length
+     * @param array of elements
+     */
+    public static void mergeSort(int n, int... array) {
+        if (checkNull(array)) {
             return;
-        }
-
-        if (n < 2) {
+        } else if (checkLength(array)) {
             return;
         }
 
@@ -94,19 +146,25 @@ public class ArraySortingLogic {
         for (int i = mid; i < n; i++) {
             r[i - mid] = array[i];
         }
-        mergeSort(l, mid);
-        mergeSort(r, n - mid);
+        mergeSort(mid, l);
+        mergeSort(n - mid, r);
 
         merge(array, l, r, mid, n - mid);
     }
 
-    public static void merge(int[] array, int[] l, int[] r, int left, int right) {
+    /**
+     * @param array of elements
+     * @param l     - temporary array
+     * @param r     - temporary array
+     * @param left  - left bounds
+     * @param right - right bounds
+     */
+    private static void merge(int[] array, int[] l, int[] r, int left, int right) {
         int i = 0, j = 0, k = 0;
         while (i < left && j < right) {
             if (l[i] <= r[j]) {
                 array[k++] = l[i++];
-            }
-            else {
+            } else {
                 array[k++] = r[j++];
             }
         }
@@ -118,18 +176,30 @@ public class ArraySortingLogic {
         }
     }
 
-    //------------------quick sort-----------------------
-    public static void qSort(int[] array) {
-        if(checkNull(array)) {
+    /************quick sort*************
+     *
+     * One of the fastest known universal array sorting algorithms ( O(n log n) )
+     *
+     * @param array of elements
+     */
+    public static void qSort(int... array) {
+        if (checkNull(array)) {
+            return;
+        } else if (checkLength(array)) {
             return;
         }
 
         int startIndex = 0;
-        int endIndex =  array.length - 1;
-        doSort(array, startIndex, endIndex);
+        int endIndex = array.length - 1;
+        doSort(startIndex, endIndex, array);
     }
 
-    private static void doSort(int[] array, int start, int end) {
+    /**
+     * @param start - the beginning of the array
+     * @param end   - end of array
+     * @param array of elements
+     */
+    private static void doSort(int start, int end, int... array) {
         if (start >= end) {
             return;
         }
@@ -153,7 +223,7 @@ public class ArraySortingLogic {
                     cur = i;
             }
         }
-        doSort(array, start, cur);
-        doSort(array,cur+1, end);
+        doSort(start, cur, array);
+        doSort(cur + 1, end, array);
     }
 }
