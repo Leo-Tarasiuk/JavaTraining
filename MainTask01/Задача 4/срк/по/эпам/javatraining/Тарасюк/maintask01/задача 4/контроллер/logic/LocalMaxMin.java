@@ -5,9 +5,7 @@ import by.epam.javatraining.tarasiuk.maintask01.task4.view.logic.Printer;
 
 public class LocalMaxMin {
     public static void main(String[] args) {
-        double[] array = {1, 2, 3, 2, 4, 4};
-
-        int local = LocalMaxMinLogic.findLocalMaxMin(array);
+        int local = LocalMaxMinLogic.findLocalMaxMin(2, 2, 3, 1, 4);
 
         Printer.print(local);
     }
