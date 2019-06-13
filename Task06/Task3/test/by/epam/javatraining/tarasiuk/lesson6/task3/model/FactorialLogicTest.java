@@ -7,10 +7,10 @@ import static org.junit.Assert.assertEquals;
 public class FactorialLogicTest {
 
     @Test
-    public void testcalcFact() {
-        int a = 5;
+    public void calcFact() {
+        int a = 3;
 
-        int expected = 120;
+        int expected = 6;
 
         assertEquals(expected, FactorialLogic.calcFact(a));
     }
