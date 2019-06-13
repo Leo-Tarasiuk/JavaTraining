@@ -20,7 +20,7 @@ public class Dragon {
             Printer.printException();
         }
 
-        Printer.print(dragonEyes);
         Printer.print(dragonHeads);
+        Printer.print(dragonEyes);
     }
 }
