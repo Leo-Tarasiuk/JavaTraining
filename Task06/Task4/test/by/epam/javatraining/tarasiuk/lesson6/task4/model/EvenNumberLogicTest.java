@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 public class EvenNumberLogicTest {
 
     @Test
-    public void testcheckEven() {
+    public void checkEven() {
         int a = 248;
 
         String expected = "even";
@@ -16,7 +16,7 @@ public class EvenNumberLogicTest {
     }
 
     @Test
-    public void testcheckUneven() {
+    public void checkUneven() {
         int a = 531;
 
         String expected = "uneven";
