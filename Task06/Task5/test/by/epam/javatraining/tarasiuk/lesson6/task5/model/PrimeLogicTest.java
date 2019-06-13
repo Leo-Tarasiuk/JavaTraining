@@ -7,11 +7,9 @@ import static org.junit.Assert.*;
 public class PrimeLogicTest {
 
     @Test
-    public void testcheckPrimeNumber() {
+    public void checkPrimeNumber() {
         int a = 17;
 
-        boolean expected = true;
-
-        assertTrue(expected == PrimeLogic.checkPrimeNumber(a));
+        assertTrue(PrimeLogic.checkPrimeNumber(a));
     }
 }
