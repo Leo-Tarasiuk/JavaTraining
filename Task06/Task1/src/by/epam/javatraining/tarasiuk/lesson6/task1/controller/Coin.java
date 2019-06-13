@@ -9,11 +9,10 @@ public class Coin {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         try {
-
             int shot = scanner.nextInt();
             CoinLogic.calcSide(shot);
             int eagle = CoinLogic.getEagle();
-            int tale = CoinLogic.getTale();
+            int tale = shot - eagle;
             Printer.print(eagle, tale);
         } catch (Exception e) {
             Printer.printException();
