@@ -10,23 +10,17 @@ public class DragonLogicTest {
     public void calcDragonHeads() {
         int a = 201;
 
-        int expected = 604;
+        int expected = 605;
 
         assertEquals(expected, DragonLogic.calcDragonHeads(a));
     }
 
     @Test
     public void calcDragonEyes() {
-        int a = 600;
+        int a = 201;
 
-        int expected = 2202;
+        int expected = 1210;
 
         assertEquals(expected, DragonLogic.calcDragonEyes(a));
-    }
-
-    @Test
-    public void checkValidValue() {
-        int a = 5;
-        assertTrue(a >= 0);
     }
 }
