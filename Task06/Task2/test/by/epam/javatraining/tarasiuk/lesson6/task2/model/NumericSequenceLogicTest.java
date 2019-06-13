@@ -7,20 +7,16 @@ import static org.junit.Assert.*;
 public class NumericSequenceLogicTest {
 
     @Test
-    public void testcheckIncreaseSequence() {
+    public void checkIncreaseSequence() {
         int a = 123456;
 
-        boolean expected = true;
-
-        assertTrue(expected == NumericSequenceLogic.checkIncreaseSequence(a));
+        assertTrue(NumericSequenceLogic.checkIncreaseSequence(a));
     }
 
     @Test
-    public void testcheckDecreaseSequence() {
+    public void checkDecreaseSequence() {
         int a = 654321;
 
-        boolean expected = true;
-
-        assertTrue(expected == NumericSequenceLogic.checkDecreaseSequence(a));
+        assertTrue(NumericSequenceLogic.checkDecreaseSequence(a));
     }
 }
